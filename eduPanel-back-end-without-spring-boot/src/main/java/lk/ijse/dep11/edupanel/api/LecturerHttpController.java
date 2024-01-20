@@ -45,14 +45,15 @@ public class LecturerHttpController {
             LecturerTO lecturerTO = mapper.map(lecturer, LecturerTO.class);
 
             if (lecturerReqTo.getLinkedin() != null) {
-                em.persist(new LinkedIn(lecturer, lecturerReqTo.getLinkedin()));
-                lecturer.setPicture(new Picture(lecturer, "lecturers/" + lecturer.getId()));
+                LinkedIn linkedIn = new LinkedIn(lecturer, lecturerReqTo.getLinkedin());
+                em.persist(linkedIn);
+                lecturer.setLinkedIn(linkedIn);
                 lecturerTO.setLinkedin(lecturerReqTo.getLinkedin());
             }
 
             if (lecturerReqTo.getPicture() != null) {
                 Picture picture = new Picture(lecturer, "lecturers/" + lecturer.getId());
-                lecturer.setLinkedIn(new LinkedIn(lecturer, lecturerReqTo.getLinkedin()));
+                lecturer.setPicture(picture);
                 em.persist(picture);
 
                 Blob blobRef = bucket.create(picture.getPicturePath(), lecturerReqTo.getPicture().getInputStream(), lecturerReqTo.getPicture().getContentType());
@@ -111,7 +112,27 @@ public class LecturerHttpController {
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PatchMapping(value = "/{lecturer-id}",consumes = "application/json")
-    public void updateLecturerDetailsViaJson(@PathVariable("lecturer-id") Integer lecturerId){}
+    public void updateLecturerDetailsViaJson(@PathVariable("lecturer-id") Integer lecturerId,
+                                             @RequestBody @Validated LecturerTO lecturerTO){
+        Lecturer currentLecturer = em.find(Lecturer.class, lecturerId);
+        if (currentLecturer == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
+        em.getTransaction().begin();
+        try {
+            Lecturer newLecturer = mapper.map(lecturerTO, Lecturer.class);
+            newLecturer.setId(lecturerId);
+            newLecturer.setPicture(currentLecturer.getPicture());
+            newLecturer.setLinkedIn(lecturerTO.getLinkedin() != null ? new LinkedIn(newLecturer, lecturerTO.getLinkedin()) : null);
+
+            updateLinkedIn(currentLecturer, newLecturer);
+
+            em.merge(newLecturer);
+            em.getTransaction().commit();
+        } catch (Throwable t) {
+            em.getTransaction().rollback();
+            throw new RuntimeException(t);
+        }
+    }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{lecturer-id}")

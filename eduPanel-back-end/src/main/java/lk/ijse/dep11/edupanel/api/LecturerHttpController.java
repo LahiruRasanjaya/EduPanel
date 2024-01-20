@@ -16,7 +16,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/lecturers")
@@ -131,19 +134,39 @@ public class LecturerHttpController {
     }
 
     @GetMapping(produces = "application/json")
-    public void getAllLecturers(){
+    public List<LecturerTO> getAllLecturers(){
+        TypedQuery<Lecturer> query = em.createQuery("SELECT l FROM Lecturer l", Lecturer.class);
+        return getLecturerTOList(query);
 
     }
 
     @GetMapping(value = "/{lecturer-id}" , produces = "application/json")
-    public void getLecturerDetails(@PathVariable("lecturer-id") Integer lecturerId){}
+    public void getLecturerDetails(@PathVariable("lecturer-id") Integer lecturerId){
+
+    }
 
     @GetMapping(params = "type=full-time", produces = "application/json")
-    public void getFullTimeLecturers(){}
+    public List<LecturerTO> getFullTimeLecturers(){
+        TypedQuery<Lecturer> query = em.createQuery("SELECT l FROM Lecturer l WHERE l.type = lk.ijse.dep11.edupanel.util.LecturerType.FULL_TIME", Lecturer.class);
+        return getLecturerTOList(query);
+    }
 
     @GetMapping(params = "type=visiting", produces = "application/json")
-    public void getPartTimeLecturers(){
+    public List<LecturerTO> getPartTimeLecturers(){
+        TypedQuery<Lecturer> query = em.createQuery("SELECT l FROM Lecturer l WHERE l.type = lk.ijse.dep11.edupanel.util.LecturerType.VISITING", Lecturer.class);
+        return getLecturerTOList(query);
+    }
+    private List<LecturerTO> getLecturerTOList(TypedQuery<Lecturer> query) {
+        return query.getResultStream().map(this::getLecturerTO).collect(Collectors.toList());
+    }
 
+    private LecturerTO getLecturerTO(Lecturer lectureEntity) {
+        LecturerTO lecturerTO = mapper.map(lectureEntity, LecturerTO.class);
+        if (lectureEntity.getLinkedIn() != null) lecturerTO.setLinkedin(lectureEntity.getLinkedIn().getUrl());
+        if (lectureEntity.getPicture() != null) {
+            lecturerTO.setPicture(bucket.get(lectureEntity.getPicture().getPicturePath()).signUrl(1, TimeUnit.DAYS, Storage.SignUrlOption.withV4Signature()).toString());
+        }
+        return lecturerTO;
     }
     private void updateLinkedIn(Lecturer currentLecturer, Lecturer newLecturer){
         if (newLecturer.getLinkedIn() != null && currentLecturer.getLinkedIn() == null) {

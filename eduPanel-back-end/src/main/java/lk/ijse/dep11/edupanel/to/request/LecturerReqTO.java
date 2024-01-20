@@ -15,7 +15,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LecturerReqTO implements Serializable {
-    private Integer id;
     @NotBlank(message = "Name can't be empty")
     @Pattern(regexp = "^[A-Za-z ]{2,}$", message = "Invalid name")
     private String name;

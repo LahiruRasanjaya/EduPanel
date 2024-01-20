@@ -141,8 +141,10 @@ public class LecturerHttpController {
     }
 
     @GetMapping(value = "/{lecturer-id}" , produces = "application/json")
-    public void getLecturerDetails(@PathVariable("lecturer-id") Integer lecturerId){
-
+    public LecturerTO getLecturerDetails(@PathVariable("lecturer-id") Integer lecturerId){
+        Lecturer lecturer = em.find(Lecturer.class, lecturerId);
+        if (lecturer == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        return getLecturerTO(lecturer);
     }
 
     @GetMapping(params = "type=full-time", produces = "application/json")

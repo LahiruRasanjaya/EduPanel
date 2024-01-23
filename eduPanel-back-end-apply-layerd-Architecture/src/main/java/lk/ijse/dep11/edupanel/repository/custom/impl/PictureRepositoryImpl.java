@@ -1,9 +1,21 @@
 package lk.ijse.dep11.edupanel.repository.custom.impl;
 
+import lk.ijse.dep11.edupanel.entity.Lecturer;
+import lk.ijse.dep11.edupanel.entity.LinkedIn;
 import lk.ijse.dep11.edupanel.entity.Picture;
 import lk.ijse.dep11.edupanel.repository.CrudRepositoryImpl;
 import lk.ijse.dep11.edupanel.repository.custom.PictureRepository;
 
-public class PictureRepositoryImpl extends CrudRepositoryImpl<Picture, Integer> implements PictureRepository {//// meeka test case ekedi venas kala, ME EKA VIDIYAK LinkedinRepositery eka anith vidiyata kala. override karala karanne anith vidiya
+import java.util.Optional;
 
+public class PictureRepositoryImpl extends CrudRepositoryImpl<Picture, Lecturer> implements PictureRepository {
+    @Override
+    public void deleteById(Lecturer pk) {
+        getEntityManager().remove(getEntityManager().find(LinkedIn.class, pk.getId()));
+    }
+
+    @Override
+    public Optional<Picture> findById(Lecturer pk) {
+        return Optional.ofNullable(getEntityManager().find(Picture.class, pk.getId()));
+    }
 }

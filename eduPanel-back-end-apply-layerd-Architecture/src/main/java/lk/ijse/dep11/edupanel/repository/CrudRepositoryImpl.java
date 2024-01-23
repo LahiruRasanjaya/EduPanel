@@ -42,6 +42,7 @@ public class CrudRepositoryImpl<T extends SuperEntity,ID extends Serializable> i
 
     @Override
     public void deleteById(ID pk) {
+
         em.remove(em.find(entityClzObj, pk));
     }
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>lk.ijse.dep11</groupId>
-    <artifactId>eduPanel-back-end-without-spring-boot</artifactId>
+    <artifactId>eduPanel-back-end-apply-layerd-Architecture</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
 

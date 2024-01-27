@@ -10,7 +10,7 @@ public class ServiceFactory {
     public enum ServiceType{
         LECTURER, USER
     }
-    private static ServiceFactory getInstance(){
+    public static ServiceFactory getInstance(){
         return (INSTANCE ==null)? (INSTANCE =new ServiceFactory()):INSTANCE;
     }
 

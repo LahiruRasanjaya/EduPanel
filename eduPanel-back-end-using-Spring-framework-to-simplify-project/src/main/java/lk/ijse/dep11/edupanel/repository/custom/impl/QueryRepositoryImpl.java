@@ -4,7 +4,7 @@ import lk.ijse.dep11.edupanel.repository.custom.QueryRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-
+@Repository
 public class QueryRepositoryImpl implements QueryRepository {
 
     private EntityManager em;

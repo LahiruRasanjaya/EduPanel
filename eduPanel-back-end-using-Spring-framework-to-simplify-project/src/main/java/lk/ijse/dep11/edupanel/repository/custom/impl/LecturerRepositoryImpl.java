@@ -7,7 +7,7 @@ import lk.ijse.dep11.edupanel.util.LecturerType;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public class LecturerRepositoryImpl extends CrudRepositoryImpl<Lecturer,Integer> implements LecturerRepository {
     private String type;
     @Override

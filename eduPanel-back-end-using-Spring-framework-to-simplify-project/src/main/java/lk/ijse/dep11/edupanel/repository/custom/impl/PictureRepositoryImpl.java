@@ -8,7 +8,7 @@ import lk.ijse.dep11.edupanel.repository.custom.PictureRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-
+@Repository
 public class PictureRepositoryImpl extends CrudRepositoryImpl<Picture, Lecturer> implements PictureRepository {
     @Override
     public void deleteById(Lecturer pk) {

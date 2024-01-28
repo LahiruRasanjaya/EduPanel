@@ -35,15 +35,16 @@ public class LecturerHttpController {
     private EntityManager em;
     @Autowired
     private Bucket bucket;
+    private LecturerService lecturerService;
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(consumes = "multipart/form-data", produces = "application/json")
     public LecturerTO createNewLecturer(@ModelAttribute @Validated(LecturerReqTO.Create.class)
                                       LecturerReqTO lecturerReqTo){
-
-        AppStore.setBucket(bucket);
-        AppStore.setEntityManager(em);
-        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
+//
+//        AppStore.setBucket(bucket);
+//        AppStore.setEntityManager(em);
+//        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
         return lecturerService.saveLecturer(lecturerReqTo);
 
 //        em.getTransaction().begin();
@@ -83,11 +84,11 @@ public class LecturerHttpController {
     public void updateLecturerDetailsViaMultipart(@PathVariable("lecturer-id") Integer lecturerId,
                                                   @ModelAttribute @Validated(LecturerReqTO.Update.class) LecturerReqTO lecturerReqTO){
 
-        AppStore.setBucket(bucket);
-        AppStore.setEntityManager(em);
+//        AppStore.setBucket(bucket);
+//        AppStore.setEntityManager(em);
         lecturerReqTO.setId(lecturerId);
-        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
-        lecturerService.updateLecturerDetails(lecturerReqTO);
+//        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
+//        lecturerService.updateLecturerDetails(lecturerReqTO);
 
 //        Lecturer currentLecturer = em.find(Lecturer.class, lecturerId);
 //        if (currentLecturer == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
@@ -132,10 +133,10 @@ public class LecturerHttpController {
     public void updateLecturerDetailsViaJson(@PathVariable("lecturer-id") Integer lecturerId,
                                              @RequestBody @Validated LecturerTO lecturerTO){
 
-        AppStore.setBucket(bucket);
-        AppStore.setEntityManager(em);
+//        AppStore.setBucket(bucket);
+//        AppStore.setEntityManager(em);
         lecturerTO.setId(lecturerId);
-        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
+//        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
         lecturerService.updateLecturerDetails(lecturerTO);
 
 //        Lecturer currentLecturer = em.find(Lecturer.class, lecturerId);
@@ -162,9 +163,9 @@ public class LecturerHttpController {
     @DeleteMapping("/{lecturer-id}")
     public void deleteLecturer(@PathVariable("lecturer-id") Integer lecturerId){
 
-        AppStore.setBucket(bucket);
-        AppStore.setEntityManager(em);
-        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
+//        AppStore.setBucket(bucket);
+//        AppStore.setEntityManager(em);
+//        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
         lecturerService.deleteLecturer(lecturerId);
 
 //        Lecturer lecturer = em.find(Lecturer.class, lecturerId);
@@ -187,9 +188,9 @@ public class LecturerHttpController {
     @GetMapping(produces = "application/json")
     public List<LecturerTO> getAllLecturers(){
 
-        AppStore.setBucket(bucket);
-        AppStore.setEntityManager(em);
-        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
+//        AppStore.setBucket(bucket);
+//        AppStore.setEntityManager(em);
+//        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
         return lecturerService.getLecturers(null);
 
 //        TypedQuery<Lecturer> query = em.createQuery("SELECT l FROM Lecturer l", Lecturer.class);
@@ -200,9 +201,9 @@ public class LecturerHttpController {
     @GetMapping(value = "/{lecturer-id}" , produces = "application/json")
     public LecturerTO getLecturerDetails(@PathVariable("lecturer-id") Integer lecturerId){
 
-        AppStore.setBucket(bucket);
-        AppStore.setEntityManager(em);
-        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
+//        AppStore.setBucket(bucket);
+//        AppStore.setEntityManager(em);
+//        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
         return lecturerService.getLecturerDetails(lecturerId);
 
 //        Lecturer lecturer = em.find(Lecturer.class, lecturerId);
@@ -213,9 +214,9 @@ public class LecturerHttpController {
     @GetMapping(params = "type=full-time", produces = "application/json")
     public List<LecturerTO> getFullTimeLecturers(){
 
-        AppStore.setBucket(bucket);
-        AppStore.setEntityManager(em);
-        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
+//        AppStore.setBucket(bucket);
+//        AppStore.setEntityManager(em);
+//        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
         return lecturerService.getLecturers(LecturerType.FULL_TIME);
 
 //        TypedQuery<Lecturer> query = em.createQuery("SELECT l FROM Lecturer l WHERE l.type = lk.ijse.dep11.edupanel.util.LecturerType.FULL_TIME", Lecturer.class);
@@ -225,9 +226,9 @@ public class LecturerHttpController {
     @GetMapping(params = "type=visiting", produces = "application/json")
     public List<LecturerTO> getPartTimeLecturers(){
 
-        AppStore.setBucket(bucket);
-        AppStore.setEntityManager(em);
-        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
+//        AppStore.setBucket(bucket);
+//        AppStore.setEntityManager(em);
+//        LecturerService lecturerService = ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.LECTURER);
         return lecturerService.getLecturers(LecturerType.VISITING);
 
 //        TypedQuery<Lecturer> query = em.createQuery("SELECT l FROM Lecturer l WHERE l.type = lk.ijse.dep11.edupanel.util.LecturerType.VISITING", Lecturer.class);

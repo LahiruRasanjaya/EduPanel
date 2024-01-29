@@ -8,15 +8,15 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 @Repository
-public class LinkedinRepositoryImpl extends CrudRepositoryImpl<LinkedIn, Lecturer> implements LinkedInRepository{
-    @Override
-    public void deleteById(Lecturer pk) {
-        getEntityManager().remove(getEntityManager().find(LinkedIn.class, pk.getId()));
-    }
-
-    @Override
-    public Optional<LinkedIn> findById(Lecturer pk) {
-        return Optional.ofNullable(getEntityManager().find(LinkedIn.class, pk.getId()));
-    }
+public class LinkedinRepositoryImpl extends CrudRepositoryImpl<LinkedIn, Integer> implements LinkedInRepository{
+//    @Override
+//    public void deleteById(Lecturer pk) {
+//        getEntityManager().remove(getEntityManager().find(LinkedIn.class, pk.getId()));
+//    }
+//
+//    @Override
+//    public Optional<LinkedIn> findById(Lecturer pk) {
+//        return Optional.ofNullable(getEntityManager().find(LinkedIn.class, pk.getId()));
+//    }
 
 }

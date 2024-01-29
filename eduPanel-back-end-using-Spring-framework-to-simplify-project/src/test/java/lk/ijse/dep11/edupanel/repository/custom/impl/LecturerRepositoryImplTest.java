@@ -25,8 +25,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringJUnitWebConfig(classes = {WebRootConfig.class, WebAppConfig.class})
 class LecturerRepositoryImplTest {
 
-    private final LecturerRepository repository = RepositoryFactory.getInstance()
-            .getRepository(RepositoryFactory.RepositoryType.LECTURER);
+    @Autowired
+    private LecturerRepository repository ;
     private EntityManager entityManager;
     @Autowired
     private EntityManagerFactory entityManagerFactory;

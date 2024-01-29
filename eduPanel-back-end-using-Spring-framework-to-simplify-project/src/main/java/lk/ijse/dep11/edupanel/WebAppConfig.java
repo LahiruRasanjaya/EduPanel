@@ -22,7 +22,7 @@ import java.io.InputStream;
 @Configuration
 @EnableWebMvc
 @ComponentScan
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class WebAppConfig implements WebMvcConfigurer {
     @Bean
     public Bucket defaultBucket() throws IOException {

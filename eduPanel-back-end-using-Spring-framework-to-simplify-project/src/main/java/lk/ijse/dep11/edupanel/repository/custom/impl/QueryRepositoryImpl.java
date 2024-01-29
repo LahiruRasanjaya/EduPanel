@@ -1,10 +1,11 @@
 package lk.ijse.dep11.edupanel.repository.custom.impl;
 
 import lk.ijse.dep11.edupanel.repository.custom.QueryRepository;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-@Repository
+@Component
 public class QueryRepositoryImpl implements QueryRepository {
 
     private EntityManager em;

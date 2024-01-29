@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/api/v1/lecturers")
 @CrossOrigin
 public class LecturerHttpController {
-    
+
     @Autowired
     private LecturerService lecturerService;
 

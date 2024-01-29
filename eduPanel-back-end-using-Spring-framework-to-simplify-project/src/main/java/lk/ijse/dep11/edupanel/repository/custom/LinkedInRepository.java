@@ -4,6 +4,6 @@ import lk.ijse.dep11.edupanel.entity.Lecturer;
 import lk.ijse.dep11.edupanel.entity.LinkedIn;
 import lk.ijse.dep11.edupanel.repository.CrudRepository;
 
-public interface LinkedInRepository extends CrudRepository <LinkedIn,Lecturer>{
+public interface LinkedInRepository extends CrudRepository <LinkedIn,Integer>{
 
 }

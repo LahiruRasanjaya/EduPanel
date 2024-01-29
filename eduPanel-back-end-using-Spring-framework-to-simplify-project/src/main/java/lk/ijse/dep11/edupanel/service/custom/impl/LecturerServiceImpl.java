@@ -12,12 +12,12 @@ import lk.ijse.dep11.edupanel.repository.custom.LinkedInRepository;
 import lk.ijse.dep11.edupanel.repository.custom.PictureRepository;
 import lk.ijse.dep11.edupanel.service.custom.LecturerService;
 import lk.ijse.dep11.edupanel.service.util.Transformer;
-import lk.ijse.dep11.edupanel.store.AppStore;
 import lk.ijse.dep11.edupanel.to.LecturerTO;
 import lk.ijse.dep11.edupanel.to.request.LecturerReqTO;
 import lk.ijse.dep11.edupanel.util.LecturerType;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -33,15 +33,15 @@ public class LecturerServiceImpl implements LecturerService {
     private final Transformer transformer ;
     private final Bucket bucket;
 
-    public LecturerServiceImpl(LecturerRepository lecturerRepository, LinkedInRepository linkedInRepository, PictureRepository pictureRepository, Transformer transformer) {
+    public LecturerServiceImpl(LecturerRepository lecturerRepository, LinkedInRepository linkedInRepository, PictureRepository pictureRepository, Transformer transformer, EntityManager entityManager, Bucket bucket) {
         this.lecturerRepository = lecturerRepository;
         this.linkedInRepository = linkedInRepository;
         this.pictureRepository = pictureRepository;
         this.transformer = transformer;
-        lecturerRepository.setEntityManager(AppStore.getEntityManager());
-        linkedInRepository.setEntityManager(AppStore.getEntityManager());
-        pictureRepository.setEntityManager(AppStore.getEntityManager());
-        bucket = AppStore.getBucket();
+        this.bucket = bucket;
+        lecturerRepository.setEntityManager(entityManager);
+        linkedInRepository.setEntityManager(entityManager);
+        pictureRepository.setEntityManager(entityManager);
     }
 
     @Override
@@ -82,11 +82,11 @@ public class LecturerServiceImpl implements LecturerService {
         Blob blobRef = null;
         if (currentLecturer.getPicture() != null) {
             blobRef = bucket.get(currentLecturer.getPicture().getPicturePath());
-            pictureRepository.deleteById(currentLecturer);
+            pictureRepository.deleteById(currentLecturer.getId());
         }
 
         if (currentLecturer.getLinkedIn() != null) {
-            linkedInRepository.deleteById(currentLecturer);
+            linkedInRepository.deleteById(currentLecturer.getId());
         }
 
         Lecturer newLecturer = transformer.fromLecturerReqTO(lecturerReqTO);
@@ -121,7 +121,7 @@ public class LecturerServiceImpl implements LecturerService {
 
         /* Remove the old linked in */
         if (currentLecturer.getLinkedIn() != null) {
-            linkedInRepository.deleteById(currentLecturer);
+            linkedInRepository.deleteById(currentLecturer.getId());
         }
 
         Lecturer newLecturer = transformer.fromLecturerTO(lecturerTO);

@@ -18,6 +18,7 @@ import lk.ijse.dep11.edupanel.util.LecturerType;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -25,6 +26,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class LecturerServiceImpl implements LecturerService {
 
     private final LecturerRepository lecturerRepository ;
@@ -33,15 +35,12 @@ public class LecturerServiceImpl implements LecturerService {
     private final Transformer transformer ;
     private final Bucket bucket;
 
-    public LecturerServiceImpl(LecturerRepository lecturerRepository, LinkedInRepository linkedInRepository, PictureRepository pictureRepository, Transformer transformer, EntityManager entityManager, Bucket bucket) {
+    public LecturerServiceImpl(LecturerRepository lecturerRepository, LinkedInRepository linkedInRepository, PictureRepository pictureRepository, Transformer transformer, Bucket bucket) {
         this.lecturerRepository = lecturerRepository;
         this.linkedInRepository = linkedInRepository;
         this.pictureRepository = pictureRepository;
         this.transformer = transformer;
         this.bucket = bucket;
-        lecturerRepository.setEntityManager(entityManager);
-        linkedInRepository.setEntityManager(entityManager);
-        pictureRepository.setEntityManager(entityManager);
     }
 
     @Override

@@ -1,0 +1,130 @@
+2024-02-02 01:21:10.142  INFO 23444 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : Starting AppInitializer using Java 11.0.19 on lahiru-Inspiron-5558 with PID 23444 (/home/lahiru/Documents/dep-11/Assignments/GitHub-Projects/eduPanel/eduPanel-back-end/target/classes started by lahiru in /home/lahiru/Documents/dep-11/Assignments/GitHub-Projects/eduPanel/eduPanel-back-end)
+2024-02-02 01:21:10.147  INFO 23444 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : No active profile set, falling back to 1 default profile: "default"
+2024-02-02 01:21:10.268  INFO 23444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-02 01:21:10.269  INFO 23444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-02 01:21:11.844  INFO 23444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-02 01:21:11.919  INFO 23444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
+2024-02-02 01:21:12.527  INFO 23444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-02 01:21:12.533  INFO 23444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-02 01:21:12.534  INFO 23444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-02-02 01:21:12.588  INFO 23444 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-02 01:21:12.588  INFO 23444 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2317 ms
+2024-02-02 01:21:12.679  INFO 23444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-02 01:21:12.930  INFO 23444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-02 01:21:12.967  INFO 23444 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-02 01:21:13.001  INFO 23444 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-02-02 01:21:13.128  INFO 23444 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-02-02 01:21:13.302  INFO 23444 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-02-02 01:21:13.860  INFO 23444 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-02 01:21:13.869  INFO 23444 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 01:21:16.067  WARN 23444 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-02 01:21:16.509  INFO 23444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-02 01:21:16.544  INFO 23444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-02 01:21:16.557  INFO 23444 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : Started AppInitializer in 7.222 seconds (JVM running for 8.474)
+2024-02-02 01:21:25.320  INFO 23444 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-02 01:21:25.321  INFO 23444 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-02 01:21:25.323  INFO 23444 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-02 01:23:27.256  INFO 23444 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 01:23:27.261  INFO 23444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-02 01:23:27.277  INFO 23444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-02 01:23:36.415  INFO 23697 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : Starting AppInitializer using Java 11.0.19 on lahiru-Inspiron-5558 with PID 23697 (/home/lahiru/Documents/dep-11/Assignments/GitHub-Projects/eduPanel/eduPanel-back-end/target/classes started by lahiru in /home/lahiru/Documents/dep-11/Assignments/GitHub-Projects/eduPanel/eduPanel-back-end)
+2024-02-02 01:23:36.420  INFO 23697 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : No active profile set, falling back to 1 default profile: "default"
+2024-02-02 01:23:36.511  INFO 23697 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-02 01:23:36.511  INFO 23697 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-02 01:23:37.694  INFO 23697 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-02 01:23:37.763  INFO 23697 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2024-02-02 01:23:39.182  INFO 23697 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-02 01:23:39.194  INFO 23697 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-02 01:23:39.195  INFO 23697 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-02-02 01:23:39.308  INFO 23697 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-02 01:23:39.309  INFO 23697 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2797 ms
+2024-02-02 01:23:39.543  INFO 23697 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-02 01:23:40.120  INFO 23697 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-02 01:23:40.194  INFO 23697 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-02 01:23:40.269  INFO 23697 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-02-02 01:23:40.733  INFO 23697 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-02-02 01:23:40.908  INFO 23697 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-02-02 01:23:41.968  INFO 23697 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-02 01:23:41.978  INFO 23780 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : Starting AppInitializer using Java 11.0.19 on lahiru-Inspiron-5558 with PID 23780 (/home/lahiru/Documents/dep-11/Assignments/GitHub-Projects/eduPanel/eduPanel-back-end/target/classes started by lahiru in /home/lahiru/Documents/dep-11/Assignments/GitHub-Projects/eduPanel/eduPanel-back-end)
+2024-02-02 01:23:41.984  INFO 23780 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : No active profile set, falling back to 1 default profile: "default"
+2024-02-02 01:23:41.987  INFO 23697 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 01:23:42.136  INFO 23780 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-02 01:23:42.137  INFO 23780 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-02 01:23:43.513  INFO 23780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-02 01:23:43.620  INFO 23780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 3 JPA repository interfaces.
+2024-02-02 01:23:44.326  INFO 23780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-02 01:23:44.333  INFO 23780 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-02 01:23:44.333  INFO 23780 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-02-02 01:23:44.407  INFO 23780 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-02 01:23:44.407  INFO 23780 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2269 ms
+2024-02-02 01:23:44.504  INFO 23780 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-02 01:23:44.813  INFO 23780 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-02 01:23:44.867  INFO 23780 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-02 01:23:44.924  INFO 23780 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-02-02 01:23:44.990  WARN 23697 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-02 01:23:45.154  INFO 23780 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-02-02 01:23:45.295  INFO 23780 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-02-02 01:23:45.553  INFO 23697 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-02 01:23:45.612  INFO 23697 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-02 01:23:45.634  INFO 23697 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : Started AppInitializer in 10.053 seconds (JVM running for 11.746)
+2024-02-02 01:23:45.997  INFO 23780 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-02 01:23:46.007  INFO 23780 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 01:23:48.058  WARN 23780 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-02 01:23:48.396  WARN 23780 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-02-02 01:23:48.419  WARN 23780 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2024-02-02 01:23:48.422  INFO 23780 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 01:23:48.425  INFO 23780 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-02 01:23:48.438  INFO 23780 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-02 01:23:48.441  INFO 23780 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-02-02 01:23:48.455  INFO 23780 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-02-02 01:23:48.475 ERROR 23780 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-02-02 01:24:23.718  INFO 23697 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 01:24:23.726  INFO 23697 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-02 01:24:23.743  INFO 23697 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-02 01:25:04.717  INFO 24001 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : Starting AppInitializer using Java 11.0.19 on lahiru-Inspiron-5558 with PID 24001 (/home/lahiru/Documents/dep-11/Assignments/GitHub-Projects/eduPanel/eduPanel-back-end/target/classes started by lahiru in /home/lahiru/Documents/dep-11/Assignments/GitHub-Projects/eduPanel/eduPanel-back-end)
+2024-02-02 01:25:04.719  INFO 24001 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : No active profile set, falling back to 1 default profile: "default"
+2024-02-02 01:25:04.793  INFO 24001 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-02 01:25:04.794  INFO 24001 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-02 01:25:05.819  INFO 24001 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-02 01:25:05.874  INFO 24001 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2024-02-02 01:25:06.426  INFO 24001 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-02 01:25:06.433  INFO 24001 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-02 01:25:06.434  INFO 24001 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-02-02 01:25:06.500  INFO 24001 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-02 01:25:06.501  INFO 24001 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1706 ms
+2024-02-02 01:25:06.585  INFO 24001 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-02 01:25:06.890  INFO 24001 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-02 01:25:06.923  INFO 24001 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-02 01:25:06.955  INFO 24001 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-02-02 01:25:07.080  INFO 24001 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-02-02 01:25:07.210  INFO 24001 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-02-02 01:25:07.834  INFO 24001 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-02 01:25:07.842  INFO 24001 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 01:25:10.012  WARN 24001 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-02 01:25:10.351  INFO 24001 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-02 01:25:10.388  INFO 24001 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-02 01:25:10.402  INFO 24001 --- [restartedMain] lk.ijse.dep11.edupanel.AppInitializer    : Started AppInitializer in 6.345 seconds (JVM running for 7.593)
+2024-02-02 01:25:23.621  INFO 24001 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-02 01:25:23.622  INFO 24001 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-02 01:25:23.624  INFO 24001 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-02 01:26:43.996  WARN 24001 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'lecturerReqTO' on field 'type': rejected value [full-time]; codes [typeMismatch.lecturerReqTO.type,typeMismatch.type,typeMismatch.lk.ijse.dep11.edupanel.util.LecturerType,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [lecturerReqTO.type,type]; arguments []; default message [type]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'lk.ijse.dep11.edupanel.util.LecturerType' for property 'type'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@javax.validation.constraints.NotNull lk.ijse.dep11.edupanel.util.LecturerType] for value [full-time]; nested exception is java.lang.IllegalArgumentException: No enum constant lk.ijse.dep11.edupanel.util.LecturerType.full-time]]
+2024-02-02 01:28:24.680  WARN 24001 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'lecturerReqTO' on field 'type': rejected value [full-time]; codes [typeMismatch.lecturerReqTO.type,typeMismatch.type,typeMismatch.lk.ijse.dep11.edupanel.util.LecturerType,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [lecturerReqTO.type,type]; arguments []; default message [type]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'lk.ijse.dep11.edupanel.util.LecturerType' for property 'type'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@javax.validation.constraints.NotNull lk.ijse.dep11.edupanel.util.LecturerType] for value [full-time]; nested exception is java.lang.IllegalArgumentException: No enum constant lk.ijse.dep11.edupanel.util.LecturerType.full-time]]
+2024-02-02 01:29:46.818  WARN 24001 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'lecturerReqTO' on field 'type': rejected value [full-time]; codes [typeMismatch.lecturerReqTO.type,typeMismatch.type,typeMismatch.lk.ijse.dep11.edupanel.util.LecturerType,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [lecturerReqTO.type,type]; arguments []; default message [type]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'lk.ijse.dep11.edupanel.util.LecturerType' for property 'type'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@javax.validation.constraints.NotNull lk.ijse.dep11.edupanel.util.LecturerType] for value [full-time]; nested exception is java.lang.IllegalArgumentException: No enum constant lk.ijse.dep11.edupanel.util.LecturerType.full-time]]
+2024-02-02 02:03:14.222  INFO 24001 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 02:03:14.226  INFO 24001 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-02 02:03:14.233  INFO 24001 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

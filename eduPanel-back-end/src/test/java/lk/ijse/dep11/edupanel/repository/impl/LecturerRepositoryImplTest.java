@@ -1,13 +1,11 @@
 package lk.ijse.dep11.edupanel.repository.impl;
 
-import lk.ijse.dep11.edupanel.AppConfig;
 import lk.ijse.dep11.edupanel.entity.Lecturer;
 import lk.ijse.dep11.edupanel.repository.LecturerRepository;
 import lk.ijse.dep11.edupanel.util.LecturerType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

@@ -6,24 +6,22 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.cloud.StorageClient;
 import lk.ijse.dep11.edupanel.conveter.LecturerTypeConverter;
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.format.FormatterRegistry;
-import org.springframework.web.multipart.support.StandardServletMultipartResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 @Configuration
-@EnableWebMvc
-@ComponentScan
-@EnableAspectJAutoProxy(proxyTargetClass = true)
-public class WebAppConfig implements WebMvcConfigurer {
+public class AppConfig implements WebMvcConfigurer {
+    @Bean
+    public ModelMapper mapper(){
+        return new ModelMapper();
+    }
     @Bean
     public Bucket defaultBucket() throws IOException {
         InputStream serviceAccount =
@@ -36,11 +34,6 @@ public class WebAppConfig implements WebMvcConfigurer {
 
         FirebaseApp.initializeApp(options);
         return StorageClient.getInstance().bucket();
-    }
-    @Bean
-    public StandardServletMultipartResolver multipartResolver(){
-
-        return new StandardServletMultipartResolver();
     }
     @Override
     public void addFormatters(FormatterRegistry registry) {

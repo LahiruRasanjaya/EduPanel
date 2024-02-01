@@ -1,7 +1,6 @@
 package lk.ijse.dep11.edupanel.service.custom.impl;
 
-import lk.ijse.dep11.edupanel.WebAppConfig;
-import lk.ijse.dep11.edupanel.WebRootConfig;
+import lk.ijse.dep11.edupanel.AppConfig;
 import lk.ijse.dep11.edupanel.exception.AppException;
 import lk.ijse.dep11.edupanel.service.custom.LecturerService;
 import lk.ijse.dep11.edupanel.to.LecturerTO;
@@ -11,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 
 import javax.transaction.Transactional;
@@ -20,8 +20,10 @@ import static org.junit.jupiter.api.Assumptions.assumingThat;
 
 
 //@ExtendWith(MockitoExtension.class)
+
+//@SpringJUnitWebConfig(classes = {WebRootConfig.class, AppConfig.class})
+@SpringBootTest
 @Transactional
-@SpringJUnitWebConfig(classes = {WebRootConfig.class, WebAppConfig.class})
 class LecturerServiceImplTest {
 
     @Autowired
